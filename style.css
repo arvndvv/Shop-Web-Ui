@@ -1,0 +1,388 @@
+html,
+body,
+* {
+  box-sizing: border-box;
+}
+html{
+     scroll-behavior: smooth;
+}
+a{
+    text-decoration:none;
+}
+body {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #c00000;
+}
+main {
+}
+#container {
+  position: relative;
+  width: 100vw;
+  background: #2f3640;
+  min-height: 100vh;
+  color: white;
+}
+nav {
+  display: flex;
+  padding: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100vw;
+  margin-bottom: 0;
+  height: 5rem;
+  position: fixed!important;
+  bottom: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #ff4477, #ff2222);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+nav ul li {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+nav ul li span{
+  color: #2f3640;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all ease 0.4s;
+}
+nav ul li span:hover{
+  color: aliceblue!important;
+}
+
+nav ul li:last-child {
+  margin-right: 2.5rem;
+  width: 30px;
+  position: relative;
+  height: 30px;
+  background: transparent;
+}
+header{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  height: 40vh;
+  background: url("aaa.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+
+  width: 100%;
+  
+}
+figure img{
+  width: 500px;
+  height: 500px;
+}
+
+h1{
+color: #cf0000;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 35vh;
+  animation: fade 1.5s forwards;
+  transition: all 0.5s;
+  position: absolute;
+}
+h1:hover{
+  text-shadow:0px 0px 10px #ff8f5c;
+}
+h6{
+  position: absolute;
+ color: white;
+ top: 45%;
+  font-size: 12px;
+  font-style: italic;
+  
+
+}
+h6::before{
+  content: "";
+  
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  background: black;
+  animation: write 1s forwards;
+  animation-delay: 2s;
+  transition: all 0.5s;
+}
+@keyframes write{
+  0%{
+    left: 0%;
+    width: 100px;
+    
+  }
+  100%{
+    left: 100%;
+    width: 0px;
+  }
+}
+h2{
+  margin: 15px;
+  color:#af2536;
+  cursor:pointer;
+}
+desc{
+  display: flex;
+  margin: auto;
+  min-height: 20vh;
+  width: 60vw;
+  color: white;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.4);
+  padding: 20px; 
+  text-align: justify;
+
+  text-justify: inter-word;
+}
+@keyframes fade{
+  0%{
+    font-size: 72px;
+    opacity: 0;
+    width: 120%;
+    filter: blur(20px);
+  }
+
+  100%{
+    font-size: 24px;
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+item{
+padding: auto;
+justify-content: center;
+text-align: center;
+align-items: center;
+margin-top: 70px;
+}
+shop{
+  margin-top: 20px;
+  display: flex;
+  width: 100vw;
+  min-height: 40vh;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  margin-bottom: 10vh;
+}
+figure{
+  position: relative;
+}
+figure a{
+  position: absolute;
+  top: 85%!important;
+ bottom: 0!important;
+ background: rgb(255, 48, 48);
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  padding:10px 30px 10px 30px !important;
+
+}
+figure a span{
+  margin: auto;
+ line-height: 5vh;
+}
+figure a:before{
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 0%;
+  background: white;
+  top: 0;
+  left: 0;
+}
+figure a:hover:before{
+  width: 100%;
+
+}
+shop h1{
+  line-height: 0;
+}
+.logo {
+position:relative  ;
+margin:0;
+  background: url(https://cdn1.iconfinder.com/data/icons/cybercrime-internet-security/33/antivirus-03-512.png);
+  background-size: cover;
+  background-position:center ;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.searchBox {
+  position: absolute;
+  top: -60%;
+  left: 40%;
+  transform: translate(-50%, 50%);
+  background: transparent;
+  height: 35px;
+  width: 35px;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.searchBox:hover > .searchInput {
+  width: 120px;
+  padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  display: none;
+}
+
+.searchBox:focus > .searchButton {
+  display: none;
+}
+.searchButton {
+  color: white;
+  float: right;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  border: 1px solid transparent;
+  position: absolute;
+  top: 10%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  position: absolute;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  top: 25%;
+  margin2 0px;
+  transition: 0.4s;
+  line-height: 0px;
+  width: 0px;
+}
+.kart{
+  font-size: 28px;
+  color:#2f3640;
+  cursor: pointer;
+}
+footer{
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+@media only screen and (min-width: 300px) {
+nav{
+    margin:0;
+    padding:0;
+}
+.logo{
+    width:25px;
+    height:25px;
+}
+  h2{
+    margin: 10px;
+    font-size: 14px;
+    color:#af2536;
+    
+  }
+  desc{
+    width: 90vw;
+  }
+ 
+
+
+@media only screen and (min-width: 640px) {
+  header{
+    height: 50vh;
+  }
+  header h1{
+    line-height: 42vh;
+  }
+ 
+  }
+  @media only screen and (min-width: 780px) {
+    header{
+      height: 100vh;
+    }
+    header h1{
+      line-height: 95vh ;
+    }
+   
+    h6{
+      top:50%;
+    }
+    }
+
+    @media only screen and (min-width: 1060px) {
+    
+    header{
+      height: 100vh;
+    }
+    @keyframes fade{
+      0%{
+        font-size: 72px;
+        opacity: 0;
+        width: 120%;
+        filter: blur(20px);
+      }
+    
+      100%{
+        font-size: 36px;
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+    header h1{
+      line-height: 95vh ;
+    
+    }
+  
+    h6{
+      top:50%;
+    }
+    }
+
+    
+  
